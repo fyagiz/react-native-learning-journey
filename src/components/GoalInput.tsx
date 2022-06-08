@@ -1,8 +1,8 @@
 import { View, Button, TextInput, StyleSheet } from "react-native";
 import { useState } from "react";
-import { IOnAddGoal } from "../interfaces/IGoalInputProps";
+import { TOnAddGoal } from "../types/TGoalInput";
 
-function GoalInput(props: { onAddGoal: IOnAddGoal }) {
+function GoalInput(props: { onAddGoal: TOnAddGoal }) {
     const [enteredGoalText, setEnteredGoalText] = useState<string>("");
 
     function goalInputHandler(enteredText: string) {
