@@ -1,0 +1,1 @@
+export type TOnDeleteItem = (id: string) => void;

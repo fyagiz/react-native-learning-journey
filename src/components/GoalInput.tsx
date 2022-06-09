@@ -5,8 +5,8 @@ import { TOnAddGoal } from "../types/TGoalInput";
 function GoalInput(props: { onAddGoal: TOnAddGoal }) {
     const [enteredGoalText, setEnteredGoalText] = useState<string>("");
 
-    function goalInputHandler(enteredText: string) {
-        setEnteredGoalText(enteredText);
+    function goalInputHandler(enteredGoalText: string) {
+        setEnteredGoalText(enteredGoalText);
     }
 
     function addGoalHandler() {
