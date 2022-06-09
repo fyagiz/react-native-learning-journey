@@ -12,10 +12,10 @@ After installation of expo, you should change directory to src folder. And then,
 npm run start
 ```
 
-[<img src="./images/android1.png" width="200"/>](android1.png)
-[<img src="./images/android2.png" width="200"/>](android2.png)
-[<img src="./images/android3.png" width="200"/>](android3.png)
+[<img src="./images/android1.png" width="200"/>]
+[<img src="./images/android2.png" width="200"/>]
+[<img src="./images/android3.png" width="200"/>]
 
-[<img src="./images/ios1.jpeg" width="200"/>](ios1.jpeg)
-[<img src="./images/ios2.jpeg" width="200"/>](ios2.jpeg)
-[<img src="./images/ios3.jpeg" width="200"/>](ios3.jpeg)
+[<img src="./images/ios1.jpeg" width="200"/>]
+[<img src="./images/ios2.jpeg" width="200"/>]
+[<img src="./images/ios3.jpeg" width="200"/>]
