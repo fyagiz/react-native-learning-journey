@@ -1,8 +1,8 @@
-import { View, Button, TextInput, StyleSheet, Modal } from "react-native";
+import { View, Button, TextInput, StyleSheet, Modal, Image } from "react-native";
 import { useState } from "react";
 import { TOnAddGoal, TOnCancel } from "../types/TGoalInput";
 
-function GoalInput(props: { onAddGoal: TOnAddGoal, visible: boolean, onCancel: TOnCancel }) {
+function GoalInput(props: { onAddGoal: TOnAddGoal; visible: boolean; onCancel: TOnCancel }) {
     const [enteredGoalText, setEnteredGoalText] = useState<string>("");
 
     function goalInputHandler(enteredGoalText: string) {
@@ -17,6 +17,7 @@ function GoalInput(props: { onAddGoal: TOnAddGoal, visible: boolean, onCancel: T
     return (
         <Modal visible={props.visible} animationType="slide">
             <View style={styles.inputContainer}>
+                <Image style={styles.image} source={require("../assets/images/goal.png")} />
                 <TextInput
                     style={styles.textInput}
                     placeholder="Your goal!"
@@ -25,10 +26,10 @@ function GoalInput(props: { onAddGoal: TOnAddGoal, visible: boolean, onCancel: T
                 />
                 <View style={styles.buttonContainer}>
                     <View style={styles.button}>
-                        <Button title="Add Goal" onPress={addGoalHandler} />
+                        <Button title="Add Goal" onPress={addGoalHandler} color="#b180f0"/>
                     </View>
                     <View style={styles.button}>
-                        <Button title="Cancel" onPress={props.onCancel}/>
+                        <Button title="Cancel" onPress={props.onCancel} color="#f31282"/>
                     </View>
                 </View>
             </View>
@@ -44,16 +45,22 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 24,
-        borderBottomWidth: 1,
-        borderBottomColor: "#cccccc",
         padding: 16,
+        backgroundColor: 'pink'
+    },
+    image: {
+        width: 100,
+        height: 100,
+        margin: 20,
     },
     textInput: {
         borderWidth: 1,
-        borderColor: "#cccccc",
+        borderColor: "#e4d0ff",
+        backgroundColor: "#e4d0ff",
+        color: "#120438",
         width: "100%",
-        padding: 8,
+        padding: 16,
+        borderRadius: 16
     },
     buttonContainer: {
         marginTop: 16,
@@ -61,6 +68,6 @@ const styles = StyleSheet.create({
     },
     button: {
         width: 100,
-        marginHorizontal: 8
-    }
+        marginHorizontal: 8,
+    },
 });

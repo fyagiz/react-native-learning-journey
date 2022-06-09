@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, View, FlatList, Button } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 import IGoal from "./interfaces/IGoal";
 import GoalItem from "./components/GoalItem";
@@ -13,7 +14,7 @@ export default function App() {
         setModalIsVisible(true);
     }
 
-    function endAddGoalHandler(){
+    function endAddGoalHandler() {
         setModalIsVisible(false);
     }
 
@@ -32,22 +33,31 @@ export default function App() {
     }
 
     return (
-        <View style={styles.appContainer}>
-            <Button title="Add new Goal" color="#5e0acc" onPress={startAddGoalHandler} />
-            <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandler}/>
-            <View style={styles.goalsContainer}>
-                <FlatList
-                    data={goals}
-                    renderItem={(itemData) => {
-                        return <GoalItem goal={itemData.item} onDeleteItem={deleteGoalHandler} />;
-                    }}
-                    keyExtractor={(item, index) => {
-                        return item.id;
-                    }}
-                    alwaysBounceVertical={false}
+        <>
+            <StatusBar style='dark'/>
+            <View style={styles.appContainer}>
+                <Button title="Add new Goal" color="#5e0acc" onPress={startAddGoalHandler} />
+                <GoalInput
+                    visible={modalIsVisible}
+                    onAddGoal={addGoalHandler}
+                    onCancel={endAddGoalHandler}
                 />
+                <View style={styles.goalsContainer}>
+                    <FlatList
+                        data={goals}
+                        renderItem={(itemData) => {
+                            return (
+                                <GoalItem goal={itemData.item} onDeleteItem={deleteGoalHandler} />
+                            );
+                        }}
+                        keyExtractor={(item, index) => {
+                            return item.id;
+                        }}
+                        alwaysBounceVertical={false}
+                    />
+                </View>
             </View>
-        </View>
+        </>
     );
 }
 
@@ -56,6 +66,7 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 50,
         paddingHorizontal: 16,
+        backgroundColor: "pink",
     },
     goalsContainer: {
         flex: 5,
