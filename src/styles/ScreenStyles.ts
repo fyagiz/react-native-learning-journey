@@ -2,6 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const startGameScreenStyle = StyleSheet.create({
     inputContainer: {
+        justifyContent: "center",
+        alignItems: "center",
         marginTop: 100,
         marginHorizontal: 24,
         padding: 16,
@@ -24,5 +26,13 @@ export const startGameScreenStyle = StyleSheet.create({
         marginVertical: 8,
         fontWeight: "bold",
         textAlign: "center",
+    },
+
+    buttonsContainer: {
+        flexDirection: "row",
+    },
+
+    buttonContainer: {
+        flex: 1,
     },
 });

@@ -12,8 +12,14 @@ function StartGameScreen() {
                 autoCapitalize="none"
                 autoCorrect={false}
             />
-            <PrimaryButton>Reset</PrimaryButton>
-            <PrimaryButton>Confirm</PrimaryButton>
+            <View style={startGameScreenStyle.buttonsContainer}>
+                <View style={startGameScreenStyle.buttonContainer}>
+                    <PrimaryButton>Reset</PrimaryButton>
+                </View>
+                <View style={startGameScreenStyle.buttonContainer}>
+                    <PrimaryButton>Confirm</PrimaryButton>
+                </View>
+            </View>
         </View>
     );
 }
