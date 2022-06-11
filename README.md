@@ -1,2 +1,5 @@
 # react-native-learning-journey
-React Native apps created while learning.
+
+This repository includes my react native apps. I developed theese apps while learning.
+
+1- [Goals-app](https://github.com/fyagiz/react-native-learning-journey/tree/goals-app)
