@@ -4,7 +4,7 @@ import { rootStyles } from "./styles/appStyles";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import GameScreen from "./screens/gameScreen";
-import Colors from "./constants/Colors";
+import Colors from "./constants/colors";
 
 export default function App() {
     const [userNumber, setUserNumber] = useState(Number);
@@ -16,7 +16,7 @@ export default function App() {
     let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
     if (userNumber) {
-        screen = <GameScreen />;
+        screen = <GameScreen userNumber={userNumber}/>;
     }
 
     return (

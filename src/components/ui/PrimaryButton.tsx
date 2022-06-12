@@ -1,7 +1,7 @@
 import { View, Text, Pressable, Button } from "react-native";
-import Colors from "../constants/Colors";
-import { primaryButtonStyles } from "../styles/componentStyles";
-import { PrimaryButtonProps } from "../types/PropTypes";
+import { primaryButtonStyles } from "../../styles/componentStyles";
+import { PrimaryButtonProps } from "../../types/PropTypes";
+import Colors from "../../constants/colors";
 
 function PrimaryButton(props: PrimaryButtonProps) {
     return (
