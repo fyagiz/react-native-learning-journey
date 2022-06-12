@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../constants/Colors";
 
 export const primaryButtonStyles = StyleSheet.create({
     buttonOuterContainer: {
@@ -8,7 +9,7 @@ export const primaryButtonStyles = StyleSheet.create({
     },
 
     buttonInnerContainer: {
-        backgroundColor: "#72063c",
+        backgroundColor: Colors.primary500,
         paddingVertical: 8,
         paddingHorizontal: 16,
         elevation: 2,
@@ -28,10 +29,10 @@ export const titleStyles = StyleSheet.create({
     text: {
         fontSize: 24,
         fontWeight: "bold",
-        color: "#ddb52f",
+        color: Colors.accent500,
         textAlign: "center",
         borderWidth: 2,
-        borderColor: "#ddb52f",
+        borderColor: Colors.accent500,
         padding: 12,
     },
 });
