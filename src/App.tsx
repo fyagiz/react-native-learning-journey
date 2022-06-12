@@ -1,4 +1,4 @@
-import { ImageBackground } from "react-native";
+import { ImageBackground, KeyboardAvoidingView } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
 import { rootStyles } from "./styles/AppStyles";
 import { LinearGradient } from "expo-linear-gradient";
@@ -13,6 +13,7 @@ export default function App() {
                 imageStyle={rootStyles.backgroundImage}
             >
                 <StartGameScreen />
+                
             </ImageBackground>
         </LinearGradient>
     );

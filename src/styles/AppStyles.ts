@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 export const rootStyles = StyleSheet.create({
     rootScreen: {
@@ -7,5 +7,10 @@ export const rootStyles = StyleSheet.create({
 
     backgroundImage: {
         opacity: 0.15,
+        position: "absolute",
+        left: 0,
+        top: 0,
+        height: Dimensions.get("window").height,
+        width: Dimensions.get("window").width,
     },
 });
