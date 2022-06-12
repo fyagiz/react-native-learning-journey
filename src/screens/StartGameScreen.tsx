@@ -1,6 +1,6 @@
 import { TextInput, View, Alert } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
-import { startGameScreenStyle } from "../styles/ScreenStyles";
+import { startGameScreenStyles } from "../styles/ScreenStyles";
 import { useState } from "react";
 import { StartGameScreenProps } from "../types/PropTypes";
 
@@ -28,9 +28,9 @@ function StartGameScreen(props: StartGameScreenProps) {
     }
 
     return (
-        <View style={startGameScreenStyle.inputContainer}>
+        <View style={startGameScreenStyles.inputContainer}>
             <TextInput
-                style={startGameScreenStyle.numberInput}
+                style={startGameScreenStyles.numberInput}
                 maxLength={2}
                 keyboardType="number-pad"
                 autoCapitalize="none"
@@ -38,11 +38,11 @@ function StartGameScreen(props: StartGameScreenProps) {
                 onChangeText={numberInputHandler}
                 value={enteredNumber}
             />
-            <View style={startGameScreenStyle.buttonsContainer}>
-                <View style={startGameScreenStyle.buttonContainer}>
+            <View style={startGameScreenStyles.buttonsContainer}>
+                <View style={startGameScreenStyles.buttonContainer}>
                     <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
                 </View>
-                <View style={startGameScreenStyle.buttonContainer}>
+                <View style={startGameScreenStyles.buttonContainer}>
                     <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
                 </View>
             </View>

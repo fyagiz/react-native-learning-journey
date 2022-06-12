@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const startGameScreenStyle = StyleSheet.create({
+export const startGameScreenStyles = StyleSheet.create({
     inputContainer: {
         justifyContent: "center",
         alignItems: "center",
@@ -34,5 +34,12 @@ export const startGameScreenStyle = StyleSheet.create({
 
     buttonContainer: {
         flex: 1,
+    },
+});
+
+export const gameScreenStyles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        padding: 24,
     },
 });

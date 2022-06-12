@@ -1,8 +1,22 @@
-import { Text } from "react-native";
+import { Text, View, SafeAreaView } from "react-native";
+import Title from "../components/Title";
+import { gameScreenStyles } from "../styles/ScreenStyles";
 
 function GameScreen() {
     return (
-        <Text>Game Screen!</Text>
+        <View style={gameScreenStyles.screen}>
+            <View>
+                <Title>Opponent's Guess</Title>
+                {/* GUESS */}
+            </View>
+            <View>
+                <Text>Higher or Lower?</Text>
+                {/* + - */}
+            </View>
+            <View>
+                {/* LOG */}
+            </View>
+        </View>
     );
 }
 

@@ -9,3 +9,7 @@ export type PrimaryButtonProps = {
 export type StartGameScreenProps = {
     onPickNumber: numberToVoid;
 };
+
+export type TitleProps = {
+    children?: string;
+}
