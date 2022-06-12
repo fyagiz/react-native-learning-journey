@@ -1,6 +1,6 @@
 import { TextInput, View, Alert } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
-import { startGameScreenStyles } from "../styles/ScreenStyles";
+import { startGameScreenStyles } from "../styles/screenStyles";
 import { useState } from "react";
 import { StartGameScreenProps } from "../types/PropTypes";
 

@@ -1,5 +1,5 @@
 import { Text } from "react-native";
-import { titleStyles } from "../styles/ComponentStyles";
+import { titleStyles } from "../styles/componentStyles";
 import { TitleProps } from "../types/PropTypes";
 
 function Title(props: TitleProps) {

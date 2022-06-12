@@ -1,6 +1,6 @@
 import { Text, View, SafeAreaView } from "react-native";
 import Title from "../components/Title";
-import { gameScreenStyles } from "../styles/ScreenStyles";
+import { gameScreenStyles } from "../styles/screenStyles";
 
 function GameScreen() {
     return (

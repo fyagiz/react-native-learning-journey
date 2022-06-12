@@ -1,9 +1,9 @@
 import { ImageBackground, SafeAreaView } from "react-native";
-import StartGameScreen from "./screens/StartGameScreen";
-import { rootStyles } from "./styles/AppStyles";
+import StartGameScreen from "./screens/startGameScreen";
+import { rootStyles } from "./styles/appStyles";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import GameScreen from "./screens/GameScreen";
+import GameScreen from "./screens/gameScreen";
 
 export default function App() {
     const [userNumber, setUserNumber] = useState(Number);
