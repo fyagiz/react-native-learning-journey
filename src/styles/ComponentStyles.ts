@@ -27,8 +27,8 @@ export const primaryButtonStyles = StyleSheet.create({
 
 export const titleStyles = StyleSheet.create({
     text: {
+        fontFamily: "open-sans-bold",
         fontSize: 24,
-        fontWeight: "bold",
         color: "white",
         textAlign: "center",
         borderWidth: 2,
@@ -50,7 +50,7 @@ export const numberContainerStyles = StyleSheet.create({
     numberText: {
         color: Colors.accent500,
         fontSize: 36,
-        fontWeight: "bold",
+        fontFamily: "open-sans-bold"
     },
 });
 
@@ -73,6 +73,7 @@ export const cardStyles = StyleSheet.create({
 
 export const instructionTextStyles = StyleSheet.create({
     instructionText: {
+        fontFamily: "open-sans",
         color: Colors.accent500,
         fontSize: 24
     },
