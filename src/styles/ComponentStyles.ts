@@ -50,7 +50,7 @@ export const numberContainerStyles = StyleSheet.create({
     numberText: {
         color: Colors.accent500,
         fontSize: 36,
-        fontFamily: "open-sans-bold"
+        fontFamily: "open-sans-bold",
     },
 });
 
@@ -75,6 +75,28 @@ export const instructionTextStyles = StyleSheet.create({
     instructionText: {
         fontFamily: "open-sans",
         color: Colors.accent500,
-        fontSize: 24
+        fontSize: 24,
     },
-})
+});
+
+export const guessLogItemStyles = StyleSheet.create({
+    listItem: {
+        borderColor: Colors.primary800,
+        borderWidth: 1,
+        borderRadius: 40,
+        padding: 12,
+        marginVertical: 8,
+        backgroundColor: Colors.accent500,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
+        elevation: 4,
+        shadowColor: "black",
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.25,
+        shadowRadius: 3,
+    },
+    itemText: {
+        fontFamily: "open-sans"
+    }
+});

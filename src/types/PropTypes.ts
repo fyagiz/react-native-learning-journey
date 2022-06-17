@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { TextStyle }  from "react-native";
+import { TextStyle } from "react-native";
 
 type numberToVoid = (pickedNumber: number) => void;
 type voidToVoid = () => void;
@@ -36,7 +36,12 @@ export type InstructionTextProps = {
 };
 
 export type GameOverScreenProps = {
-    roundsNumber: number,
-    userNumber: number,
+    roundsNumber: number;
+    userNumber: number;
     onStartNewGame: voidToVoid;
-}
+};
+
+export type GuessLogItemProps = {
+    roundNumber: number;
+    guess: number;
+};
