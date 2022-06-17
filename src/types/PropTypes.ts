@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import { TextStyle, ViewStyle }  from "react-native";
+import { TextStyle }  from "react-native";
 
 type numberToVoid = (pickedNumber: number) => void;
 type voidToVoid = () => void;
 
 export type PrimaryButtonProps = {
-    children?: string;
+    children?: string | ReactNode;
     onPress?: any;
 };
 

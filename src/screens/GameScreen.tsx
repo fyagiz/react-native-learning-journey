@@ -7,6 +7,7 @@ import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Card from "../components/ui/Card";
 import InstructionText from "../components/ui/InstructionText";
+import { Ionicons } from "@expo/vector-icons";
 
 function generateRandomNumber(min: number, max: number, exclude: number): number {
     const randomNumber = Math.floor(Math.random() * (max - min)) + min;
@@ -52,10 +53,10 @@ function GameScreen(this: ReactNode, props: GameScreenProps) {
                 <InstructionText style={gameScreenStyles.instructionText}>Higher or Lower?</InstructionText>
                 <View style={gameScreenStyles.buttonsContainer}>
                     <View style={gameScreenStyles.buttonContainer}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, false)}>-</PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, false)}><Ionicons name="md-remove" size={24} color="white"/></PrimaryButton>
                     </View>
                     <View style={gameScreenStyles.buttonContainer}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, true)}>+</PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, true)}><Ionicons name="md-add" size={24} color="white"/></PrimaryButton>
                     </View>
                 </View>
             </Card>
