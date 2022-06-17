@@ -11,4 +11,5 @@ npm run start
 ```
 
 1- [Goals App](https://github.com/fyagiz/react-native-learning-journey/tree/goals-app)
+
 2- [Number Guessing Game](https://github.com/fyagiz/react-native-learning-journey/tree/number-guessing-game)
