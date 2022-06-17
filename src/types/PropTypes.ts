@@ -1,4 +1,8 @@
+import { ReactNode } from "react";
+import { TextStyle, ViewStyle }  from "react-native";
+
 type numberToVoid = (pickedNumber: number) => void;
+type voidToVoid = () => void;
 
 export type PrimaryButtonProps = {
     children?: string;
@@ -15,8 +19,18 @@ export type TitleProps = {
 
 export type GameScreenProps = {
     userNumber: number;
+    onGameOver: voidToVoid;
 };
 
 export type NumberContainerProps = {
     children?: number;
+};
+
+export type CardProps = {
+    children?: Array<ReactNode>;
+};
+
+export type InstructionTextProps = {
+    children?: string;
+    style?: TextStyle;
 };

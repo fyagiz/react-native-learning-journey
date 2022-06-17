@@ -1,22 +1,12 @@
 import { StyleSheet } from "react-native";
 import Colors from "../constants/colors";
 
-export const startGameScreenStyles = StyleSheet.create({
-    inputContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+export const startgameScreenStyles = StyleSheet.create({
+    rootContainer: {
+        flex: 1,
         marginTop: 100,
-        marginHorizontal: 24,
-        padding: 16,
-        backgroundColor: Colors.primary800,
-        borderRadius: 8,
-        elevation: 4,
-        shadowColor: "black",
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 6,
-        shadowOpacity: 0.25,
+        alignItems: "center",
     },
-
     numberInput: {
         height: 50,
         width: 50,
@@ -43,4 +33,13 @@ export const gameScreenStyles = StyleSheet.create({
         flex: 1,
         padding: 24,
     },
+    instructionText: {
+        marginBottom: 12,
+    },
+    buttonsContainer: {
+        flexDirection: "row",
+    },
+    buttonContainer: {
+        flex: 1,
+    }
 });

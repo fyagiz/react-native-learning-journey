@@ -1,8 +1,11 @@
-import { TextInput, View, Alert } from "react-native";
+import { TextInput, View, Alert, Text } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
-import { startGameScreenStyles } from "../styles/screenStyles";
+import { startgameScreenStyles } from "../styles/screenStyles";
 import { useState } from "react";
 import { StartGameScreenProps } from "../types/PropTypes";
+import Title from "../components/ui/Title";
+import Card from "../components/ui/Card"
+import InstructionText from "../components/ui/InstructionText";
 
 function StartGameScreen(props: StartGameScreenProps) {
     const [enteredNumber, setEnteredNumber] = useState("");
@@ -28,24 +31,28 @@ function StartGameScreen(props: StartGameScreenProps) {
     }
 
     return (
-        <View style={startGameScreenStyles.inputContainer}>
-            <TextInput
-                style={startGameScreenStyles.numberInput}
-                maxLength={2}
-                keyboardType="number-pad"
-                autoCapitalize="none"
-                autoCorrect={false}
-                onChangeText={numberInputHandler}
-                value={enteredNumber}
-            />
-            <View style={startGameScreenStyles.buttonsContainer}>
-                <View style={startGameScreenStyles.buttonContainer}>
-                    <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
+        <View style={startgameScreenStyles.rootContainer}>
+            <Title>Guess My Number</Title>
+            <Card>
+                <InstructionText>Enter a Number</InstructionText>
+                <TextInput
+                    style={startgameScreenStyles.numberInput}
+                    maxLength={2}
+                    keyboardType="number-pad"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    onChangeText={numberInputHandler}
+                    value={enteredNumber}
+                />
+                <View style={startgameScreenStyles.buttonsContainer}>
+                    <View style={startgameScreenStyles.buttonContainer}>
+                        <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
+                    </View>
+                    <View style={startgameScreenStyles.buttonContainer}>
+                        <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
+                    </View>
                 </View>
-                <View style={startGameScreenStyles.buttonContainer}>
-                    <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
-                </View>
-            </View>
+            </Card>
         </View>
     );
 }
