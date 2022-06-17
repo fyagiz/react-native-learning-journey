@@ -25,11 +25,17 @@ let maxBoundary = 100;
 function GameScreen(this: ReactNode, props: GameScreenProps) {
     const initialGuess = generateRandomNumber(1, 100, props.userNumber);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
+
     useEffect(() => {
         if (currentGuess === props.userNumber) {
             props.onGameOver();
         }
     }, [currentGuess, props.userNumber, props.onGameOver]);
+
+    useEffect(() => {
+        minBoundary = 1;
+        maxBoundary = 100;
+    }, []);
 
     function nextGuessHandler(isBigger: boolean) {
         if ((isBigger === false && currentGuess < props.userNumber) || (isBigger === true && currentGuess > props.userNumber)) {
@@ -53,10 +59,14 @@ function GameScreen(this: ReactNode, props: GameScreenProps) {
                 <InstructionText style={gameScreenStyles.instructionText}>Higher or Lower?</InstructionText>
                 <View style={gameScreenStyles.buttonsContainer}>
                     <View style={gameScreenStyles.buttonContainer}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, false)}><Ionicons name="md-remove" size={24} color="white"/></PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, false)}>
+                            <Ionicons name="md-remove" size={24} color="white" />
+                        </PrimaryButton>
                     </View>
                     <View style={gameScreenStyles.buttonContainer}>
-                        <PrimaryButton onPress={nextGuessHandler.bind(this, true)}><Ionicons name="md-add" size={24} color="white"/></PrimaryButton>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, true)}>
+                            <Ionicons name="md-add" size={24} color="white" />
+                        </PrimaryButton>
                     </View>
                 </View>
             </Card>

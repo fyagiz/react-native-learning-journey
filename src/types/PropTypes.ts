@@ -34,3 +34,9 @@ export type InstructionTextProps = {
     children?: string;
     style?: TextStyle;
 };
+
+export type GameOverScreenProps = {
+    roundsNumber: number,
+    userNumber: number,
+    onStartNewGame: voidToVoid;
+}

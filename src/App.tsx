@@ -8,21 +8,26 @@ import GameOverScreen from "./screens/gameOverScreen";
 import Colors from "./constants/colors";
 import * as ExpoFont from "expo-font";
 import * as ExpoSplashScreen from "expo-splash-screen";
-import Title from "./components/ui/Title";
+import { Asset } from "expo-asset";
 
 export default function App() {
-    const [userNumber, setUserNumber] = useState(Number);
-    const [gameIsOver, setGameIsOver] = useState(true);
-    const [appIsReady, setAppIsReady] = useState(false);
+    const [userNumber, setUserNumber] = useState<number | null>();
+    const [gameIsOver, setGameIsOver] = useState<boolean>(true);
+    const [guessRounds, setGuessRounds] = useState<number>(0);
+    const [appIsReady, setAppIsReady] = useState<boolean>(false);
 
     useEffect(() => {
         async function prepare() {
             try {
-                await ExpoSplashScreen.preventAutoHideAsync();
-                await ExpoFont.loadAsync({
-                    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-                    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
-                });
+                await Promise.all([
+                    ExpoSplashScreen.preventAutoHideAsync(),
+                    ExpoFont.loadAsync({
+                        "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
+                        "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
+                    }),
+                    Asset.loadAsync(require("./assets/images/background.jpg")),
+                    Asset.loadAsync(require("./assets/images/success.jpg")),
+                ]);
             } catch (e) {
                 console.warn(e);
             } finally {
@@ -51,6 +56,11 @@ export default function App() {
         setGameIsOver(true);
     }
 
+    function startNewGameHandler() {
+        setUserNumber(null);
+        setGuessRounds(0);
+    }
+
     let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
     if (userNumber) {
@@ -58,7 +68,7 @@ export default function App() {
     }
 
     if (gameIsOver && userNumber) {
-        screen = <GameOverScreen />;
+        screen = <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={startNewGameHandler} />;
     }
 
     return (
