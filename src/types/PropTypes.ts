@@ -11,12 +11,12 @@ export type StartGameScreenProps = {
 
 export type TitleProps = {
     children?: string;
-}
+};
 
 export type GameScreenProps = {
     userNumber: number;
-}
+};
 
 export type NumberContainerProps = {
     children?: number;
-}
+};

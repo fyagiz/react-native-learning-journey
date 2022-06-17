@@ -24,18 +24,15 @@ function GameScreen(this: ReactNode, props: GameScreenProps) {
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
     function nextGuessHandler(isBigger: boolean) {
-        if (
-            (isBigger === false && currentGuess < props.userNumber) ||
-            (isBigger === true && currentGuess > props.userNumber)
-        ) {
-            Alert.alert("Dont lie!", "You know that this is wrong!", [{text: "Sorry!", style:"cancel"}])
+        if ((isBigger === false && currentGuess < props.userNumber) || (isBigger === true && currentGuess > props.userNumber)) {
+            Alert.alert("Dont lie!", "You know that this is wrong!", [{ text: "Sorry!", style: "cancel" }]);
             return;
         }
-            if (isBigger === false) {
-                maxBoundary = currentGuess;
-            } else {
-                minBoundary = currentGuess + 1;
-            }
+        if (isBigger === false) {
+            maxBoundary = currentGuess;
+        } else {
+            minBoundary = currentGuess + 1;
+        }
         const newRandomNumber = generateRandomNumber(minBoundary, maxBoundary, currentGuess);
         setCurrentGuess(newRandomNumber);
     }
