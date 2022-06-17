@@ -42,6 +42,10 @@ export const gameScreenStyles = StyleSheet.create({
     buttonContainer: {
         flex: 1,
     },
+    listContainer: {
+        flex: 1,
+        padding: 16,
+    }
 });
 
 export const gameOverScreenStyles = StyleSheet.create({

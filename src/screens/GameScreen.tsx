@@ -30,7 +30,7 @@ function GameScreen(this: ReactNode, props: GameScreenProps) {
 
     useEffect(() => {
         if (currentGuess === props.userNumber) {
-            props.onGameOver();
+            props.onGameOver(guessRounds.length);
         }
     }, [currentGuess, props.userNumber, props.onGameOver]);
 
@@ -75,7 +75,7 @@ function GameScreen(this: ReactNode, props: GameScreenProps) {
                     </View>
                 </View>
             </Card>
-            <View>
+            <View style={gameScreenStyles.listContainer}>
                 <FlatList data={guessRounds} renderItem={(itemData) => <GuessLogItem roundNumber={guessRoundListLenght - itemData.index} guess={itemData.item}/>} keyExtractor={(item) => item.toString()} />
             </View>
         </View>

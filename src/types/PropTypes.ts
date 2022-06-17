@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { TextStyle } from "react-native";
 
-type numberToVoid = (pickedNumber: number) => void;
+type numberToVoid = (number: number) => void;
 type voidToVoid = () => void;
 
 export type PrimaryButtonProps = {
@@ -19,7 +19,7 @@ export type TitleProps = {
 
 export type GameScreenProps = {
     userNumber: number;
-    onGameOver: voidToVoid;
+    onGameOver: numberToVoid;
 };
 
 export type NumberContainerProps = {
