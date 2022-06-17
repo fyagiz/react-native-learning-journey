@@ -23,7 +23,7 @@ let minBoundary = 1;
 let maxBoundary = 100;
 
 function GameScreen(this: ReactNode, props: GameScreenProps) {
-    const initialGuess = generateRandomNumber(minBoundary, maxBoundary, props.userNumber);
+    const initialGuess = generateRandomNumber(1, 100, props.userNumber);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
     useEffect(() => {
         if (currentGuess === props.userNumber) {

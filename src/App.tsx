@@ -1,4 +1,4 @@
-import { ImageBackground, SafeAreaView } from "react-native";
+import { ImageBackground, View, SafeAreaView } from "react-native";
 import StartGameScreen from "./screens/startGameScreen";
 import { rootStyles } from "./styles/appStyles";
 import { LinearGradient } from "expo-linear-gradient";
@@ -8,6 +8,7 @@ import GameOverScreen from "./screens/gameOverScreen";
 import Colors from "./constants/colors";
 import * as ExpoFont from "expo-font";
 import * as ExpoSplashScreen from "expo-splash-screen";
+import Title from "./components/ui/Title";
 
 export default function App() {
     const [userNumber, setUserNumber] = useState(Number);
