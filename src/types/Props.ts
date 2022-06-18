@@ -1,6 +1,10 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 type voidToVoid = () => void;
+
+type NavigationStackParamList = {
+    MealsOverview: {categoryID: string};
+};
+type navigationProps = NativeStackScreenProps<NavigationStackParamList, "MealsOverview">;
 
 export type CategoryGridTileProps = {
     title: string;
@@ -9,5 +13,13 @@ export type CategoryGridTileProps = {
 };
 
 export type CategoriesScreenProps = {
-    navigation: NativeStackNavigationProp<any, any>;
+    navigation: navigationProps["navigation"];
+};
+
+export type MealsOverviewScreenProps = {
+    route: navigationProps["route"];
+};
+
+export type MealItemProps = {
+    title: string
 };
