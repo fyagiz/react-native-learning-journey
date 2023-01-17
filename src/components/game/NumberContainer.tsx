@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { numberContainerStyles } from "../../styles/componentStyles";
+import { numberContainerStyles } from "../../styles/ComponentStyles";
 import { NumberContainerProps } from "../../types/PropTypes";
 
 function NumberContainer(props : NumberContainerProps) {

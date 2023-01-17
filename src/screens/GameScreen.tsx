@@ -1,7 +1,7 @@
 import { View, Alert, Text, FlatList } from "react-native";
 import { ReactNode, useState, useEffect } from "react";
 import Title from "../components/ui/Title";
-import { gameScreenStyles } from "../styles/screenStyles";
+import { gameScreenStyles } from "../styles/ScreenStyles";
 import { GameScreenProps } from "../types/PropTypes";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";

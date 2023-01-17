@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { cardStyles } from "../../styles/componentStyles";
+import { cardStyles } from "../../styles/ComponentStyles";
 import { CardProps } from "../../types/PropTypes";
 
 function Card(props: CardProps){

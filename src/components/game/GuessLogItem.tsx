@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { guessLogItemStyles } from "../../styles/componentStyles";
+import { guessLogItemStyles } from "../../styles/ComponentStyles";
 import { GuessLogItemProps } from "../../types/PropTypes";
 
 function GuessLogItem(props: GuessLogItemProps) {

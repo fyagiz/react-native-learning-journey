@@ -1,6 +1,6 @@
 import { TextInput, View, Alert, Text } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
-import { startgameScreenStyles } from "../styles/screenStyles";
+import { startgameScreenStyles } from "../styles/ScreenStyles";
 import { useState } from "react";
 import { StartGameScreenProps } from "../types/PropTypes";
 import Title from "../components/ui/Title";

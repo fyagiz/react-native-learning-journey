@@ -1,11 +1,11 @@
 import { ImageBackground, View, SafeAreaView } from "react-native";
-import StartGameScreen from "./screens/startGameScreen";
-import { rootStyles } from "./styles/appStyles";
+import StartGameScreen from "./screens/StartGameScreen";
+import { rootStyles } from "./styles/AppStyles";
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useState, useCallback } from "react";
-import GameScreen from "./screens/gameScreen";
+import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/gameOverScreen";
-import Colors from "./constants/colors";
+import Colors from "./constants/Colors";
 import * as ExpoFont from "expo-font";
 import * as ExpoSplashScreen from "expo-splash-screen";
 import { Asset } from "expo-asset";

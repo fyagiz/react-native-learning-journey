@@ -1,7 +1,7 @@
 import { View, Image, Text } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Title from "../components/ui/Title";
-import { gameOverScreenStyles } from "../styles/screenStyles";
+import { gameOverScreenStyles } from "../styles/ScreenStyles";
 import { GameOverScreenProps } from "../types/PropTypes";
 
 function GameOverScreen(props: GameOverScreenProps) {
