@@ -1,5 +1,6 @@
 import { Pressable, Text, View } from "react-native";
-import { CategoryGridTileProps } from "../types/PropTypes";
+
+type CategoryGridTileProps = { title: string; color: string };
 
 function CategoryGridTile(props: CategoryGridTileProps) {
     return (
