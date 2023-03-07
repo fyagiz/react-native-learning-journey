@@ -3,15 +3,16 @@ import { Pressable, Text, View, StyleSheet, Platform, GestureResponderEvent } fr
 type categoryGridTilePropsType = { title: string; color: string; onPress: (event: GestureResponderEvent) => void };
 
 function CategoryGridTile(props: categoryGridTilePropsType) {
+  const { title, color, onPress } = props;
   return (
     <View style={styles.gridItem}>
       <Pressable
         android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => [styles.buttonStyle, pressed ? styles.buttonPressed : null]}
-        onPress={props.onPress}
+        onPress={onPress}
       >
-        <View style={[styles.innerContainer, { backgroundColor: props.color }]}>
-          <Text style={styles.title}>{props.title}</Text>
+        <View style={[styles.innerContainer, { backgroundColor: color }]}>
+          <Text style={styles.title}>{title}</Text>
         </View>
       </Pressable>
     </View>
