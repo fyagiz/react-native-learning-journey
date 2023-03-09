@@ -1,8 +1,10 @@
-# react-native-learning-journey
+# meals-app
 
-This repository includes my react native apps. I developed these apps while learning.
+Example app to learn React Native!
 
-To run these apps you need to install expo. You might want to check [Expo Documentation](https://docs.expo.dev/get-started/installation/).
+The user can see meals recipes and can add favorites them!
+
+To run this app you need to expo. You might want to check [Expo Documentation](https://docs.expo.dev/get-started/installation/).
 
 After installation of expo, you should change directory to src folder. And then, basically run following command, and enjoy!
 
@@ -10,6 +12,6 @@ After installation of expo, you should change directory to src folder. And then,
 npm run start
 ```
 
-1- [Goals App](https://github.com/fyagiz/react-native-learning-journey/tree/goals-app)
+<img src="./images/android1.png" width="200"/> <img src="./images/android2.png" width="200"/> <img src="./images/android3.png" width="200"/> <img src="./images/android4.png" width="200"/> <img src="./images/android5.png" width="200"/> <img src="./images/android6.png" width="200"/> <img src="./images/android7.png" width="200"/>
 
-2- [Number Guessing Game](https://github.com/fyagiz/react-native-learning-journey/tree/number-guessing-game)
+<img src="./images/ios1.jpeg" width="200"/> <img src="./images/ios2.jpeg" width="200"/> <img src="./images/ios3.jpeg" width="200"/> <img src="./images/ios4.jpeg" width="200"/> <img src="./images/ios5.jpeg" width="200"/> <img src="./images/ios6.jpeg" width="200"/> <img src="./images/ios7.jpeg" width="200"/>
