@@ -4,11 +4,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import type { BottomTabNavigatorType, NativeStackNavigatorType } from "./types/NavigatorTypes";
 import ManageExpense from "./screens/ManageExpense";
 import RecentExpenses from "./screens/RecentExpenses";
 import AllExpenses from "./screens/AllExpenses";
 import { GlobalStyles } from "./constants/styles";
+import { BottomTabNavigatorType, NativeStackNavigatorType } from "./types/NavigatorTypes";
 
 const Stack = createNativeStackNavigator<NativeStackNavigatorType>();
 const BottomTabs = createBottomTabNavigator<BottomTabNavigatorType>();

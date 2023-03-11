@@ -1,0 +1,8 @@
+type ExpenseType = {
+  id: string;
+  description: string;
+  amount: number;
+  date: Date;
+};
+
+export default ExpenseType;
