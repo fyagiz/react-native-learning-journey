@@ -1,5 +1,5 @@
 export type NativeStackNavigatorType = {
-  ManageExpense: undefined;
+  ManageExpense: { expenseId?: string };
   ExpensesOverview: undefined;
 };
 export type BottomTabNavigatorType = {
