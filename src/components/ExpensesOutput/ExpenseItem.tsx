@@ -6,10 +6,10 @@ import { GlobalStyles } from "../../constants/styles";
 import { getFormattedDate } from "../../utils/dateUtil";
 import { NativeStackNavigatorType } from "../../types/NavigatorTypes";
 
-type ExpenseItemPropType = { id: string; description: string; amount: number; date: Date };
+type ExpenseItemPropsType = { id: string; description: string; amount: number; date: Date };
 type ExpenseItemNavigationType = NativeStackNavigationProp<NativeStackNavigatorType>;
 
-function ExpenseItem(props: ExpenseItemPropType) {
+function ExpenseItem(props: ExpenseItemPropsType) {
   const { id, description, amount, date } = props;
   const navigation = useNavigation<ExpenseItemNavigationType>();
 

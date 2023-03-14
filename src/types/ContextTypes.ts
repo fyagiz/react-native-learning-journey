@@ -1,10 +1,6 @@
-import ExpenseType from "./ExpenseType";
+import ExpenseType, { ExpenseTypeWithoutId } from "./ExpenseType";
 
-export type addExpenseObjectType = {
-  description: string;
-  amount: number;
-  date: Date;
-};
+export type addExpenseObjectType = ExpenseTypeWithoutId;
 
 export type ExpensesContextType = {
   expenses: Array<ExpenseType>;

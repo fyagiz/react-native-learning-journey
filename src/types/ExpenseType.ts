@@ -5,4 +5,6 @@ type ExpenseType = {
   date: Date;
 };
 
+export type ExpenseTypeWithoutId = Omit<ExpenseType, "id">;
+
 export default ExpenseType;
