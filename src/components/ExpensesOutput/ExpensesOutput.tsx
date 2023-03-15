@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import ExpensesList from "./ExpensesList";
 import ExpensesSummary from "./ExpensesSummary";
 import { GlobalStyles } from "../../constants/styles";
-import ExpenseType from "../../types/ExpenseType";
+import { ExpenseType } from "../../types/ExpenseType";
 
 type ExpensesOutputPropsType = { expenses: Array<ExpenseType>; expensesPeriod: string; fallbackText: string };
 

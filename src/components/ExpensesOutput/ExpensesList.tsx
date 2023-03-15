@@ -1,6 +1,6 @@
 import { FlatList, ListRenderItemInfo, Text } from "react-native";
 
-import ExpenseType from "../../types/ExpenseType";
+import { ExpenseType } from "../../types/ExpenseType";
 import ExpenseItem from "./ExpenseItem";
 
 type ExpensesListPropsType = { expenses: Array<ExpenseType> };

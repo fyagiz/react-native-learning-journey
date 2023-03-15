@@ -1,4 +1,4 @@
-type ExpenseType = {
+export type ExpenseType = {
   id: string;
   description: string;
   amount: number;
@@ -6,5 +6,3 @@ type ExpenseType = {
 };
 
 export type ExpenseTypeWithoutId = Omit<ExpenseType, "id">;
-
-export default ExpenseType;

@@ -9,6 +9,7 @@ import { GlobalStyles } from "../constants/styles";
 import { ExpensesContext } from "../store/expenses-context";
 import { ExpenseTypeWithoutId } from "../types/ExpenseType";
 import { NativeStackNavigatorType } from "../types/NavigatorTypes";
+import { storeExpense, updateExpense, deleteExpense } from "../utils/http";
 
 type ManageExpenseNavigationType = NativeStackNavigationProp<NativeStackNavigatorType>;
 type ManageExpenseRouteType = RouteProp<NativeStackNavigatorType, "ManageExpense">;
@@ -29,7 +30,8 @@ function ManageExpense() {
     });
   }, [navigation, isEditing]);
 
-  function deleteExpenseHandler() {
+  async function deleteExpenseHandler() {
+    await deleteExpense(editedExpenseId!);
     expensesContext.deleteExpense(editedExpenseId!);
     navigation.goBack();
   }
@@ -38,11 +40,13 @@ function ManageExpense() {
     navigation.goBack();
   }
 
-  function confirmHandler(expenseData: ExpenseTypeWithoutId) {
+  async function confirmHandler(expenseData: ExpenseTypeWithoutId) {
     if (isEditing) {
       expensesContext.updateExpense(editedExpenseId, expenseData);
+      await updateExpense(editedExpenseId, expenseData);
     } else {
-      expensesContext.addExpense(expenseData);
+      const id = await storeExpense(expenseData);
+      expensesContext.addExpense({ ...expenseData, id: id });
     }
     navigation.goBack();
   }

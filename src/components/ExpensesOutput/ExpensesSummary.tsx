@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
 import { GlobalStyles } from "../../constants/styles";
-import ExpenseType from "../../types/ExpenseType";
+import { ExpenseType } from "../../types/ExpenseType";
 
 type ExpensesSummaryPropsType = { expenses: Array<ExpenseType>; periodName: string };
 

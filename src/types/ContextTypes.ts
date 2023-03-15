@@ -1,17 +1,24 @@
-import ExpenseType, { ExpenseTypeWithoutId } from "./ExpenseType";
+import { ExpenseType, ExpenseTypeWithoutId } from "./ExpenseType";
 
-export type addExpenseObjectType = ExpenseTypeWithoutId;
+export type addExpenseObjectType = ExpenseType;
+export type updateExpenseObjectType = ExpenseTypeWithoutId;
 
 export type ExpensesContextType = {
   expenses: Array<ExpenseType>;
   addExpense: (addExpenseObject: addExpenseObjectType) => void;
+  setExpenses: (expenses: Array<ExpenseType>) => void;
   deleteExpense: (id: string) => void;
-  updateExpense: (id: string, updateExpenseObject: addExpenseObjectType) => void;
+  updateExpense: (id: string, updateExpenseObject: updateExpenseObjectType) => void;
 };
 
 type ReducerAddType = {
   type: "ADD";
   payload: addExpenseObjectType;
+};
+
+type ReducerSetType = {
+  type: "SET";
+  payload: Array<ExpenseType>;
 };
 
 type ReducerDeleteType = {
@@ -21,7 +28,7 @@ type ReducerDeleteType = {
 
 type ReducerUpdateType = {
   type: "UPDATE";
-  payload: { id: string; data: addExpenseObjectType };
+  payload: { id: string; data: updateExpenseObjectType };
 };
 
-export type ReducerActionType = ReducerAddType | ReducerDeleteType | ReducerUpdateType;
+export type ReducerActionType = ReducerAddType | ReducerSetType | ReducerDeleteType | ReducerUpdateType;

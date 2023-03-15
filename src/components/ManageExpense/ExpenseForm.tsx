@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
-import ExpenseType, { ExpenseTypeWithoutId } from "../../types/ExpenseType";
+import { ExpenseType, ExpenseTypeWithoutId } from "../../types/ExpenseType";
 import { getFormattedDate } from "../../utils/dateUtil";
 import Button from "../UI/Button";
 
