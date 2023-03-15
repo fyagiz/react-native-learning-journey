@@ -1,9 +1,10 @@
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { useContext, useLayoutEffect } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import ExpenseForm from "../components/ManageExpense/ExpenseForm";
 import IconButton from "../components/UI/IconButton";
+import LoadingOverlay from "../components/UI/LoadingOverlay";
 
 import { GlobalStyles } from "../constants/styles";
 import { ExpensesContext } from "../store/expenses-context";
@@ -15,6 +16,7 @@ type ManageExpenseNavigationType = NativeStackNavigationProp<NativeStackNavigato
 type ManageExpenseRouteType = RouteProp<NativeStackNavigatorType, "ManageExpense">;
 
 function ManageExpense() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigation = useNavigation<ManageExpenseNavigationType>();
   const route = useRoute<ManageExpenseRouteType>();
   const expensesContext = useContext(ExpensesContext);
@@ -31,6 +33,7 @@ function ManageExpense() {
   }, [navigation, isEditing]);
 
   async function deleteExpenseHandler() {
+    setIsSubmitting(true);
     await deleteExpense(editedExpenseId!);
     expensesContext.deleteExpense(editedExpenseId!);
     navigation.goBack();
@@ -41,6 +44,7 @@ function ManageExpense() {
   }
 
   async function confirmHandler(expenseData: ExpenseTypeWithoutId) {
+    setIsSubmitting(true);
     if (isEditing) {
       expensesContext.updateExpense(editedExpenseId, expenseData);
       await updateExpense(editedExpenseId, expenseData);
@@ -49,6 +53,10 @@ function ManageExpense() {
       expensesContext.addExpense({ ...expenseData, id: id });
     }
     navigation.goBack();
+  }
+
+  if (isSubmitting) {
+    return <LoadingOverlay />;
   }
 
   return (
