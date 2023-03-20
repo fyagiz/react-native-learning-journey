@@ -82,7 +82,7 @@ function ExpenseForm(props: ExpenseFormPropsType) {
     onSubmit(expenseData);
   }
 
-  const fomrIsInvalid = !inputs.amount.isValid || !inputs.date.isValid || !inputs.description.isValid;
+  const formIsInvalid = !inputs.amount.isValid || !inputs.date.isValid || !inputs.description.isValid;
 
   return (
     <View style={styles.form}>
@@ -119,7 +119,7 @@ function ExpenseForm(props: ExpenseFormPropsType) {
           value: inputs.description.value,
         }}
       />
-      {fomrIsInvalid && <Text style={styles.errorText}>Invalid input values - please check your entered data!</Text>}
+      {formIsInvalid && <Text style={styles.errorText}>Invalid input values - please check your entered data!</Text>}
       <View style={styles.buttons}>
         <Button style={styles.button} mode={"flat"} onPress={onCancel}>
           Cancel
